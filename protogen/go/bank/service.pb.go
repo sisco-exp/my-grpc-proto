@@ -24,9 +24,9 @@ var File_proto_bank_service_proto protoreflect.FileDescriptor
 
 const file_proto_bank_service_proto_rawDesc = "" +
 	"\n" +
-	"\x18proto/bank/service.proto\x12\x04bank\x1a\x1dproto/bank/type/account.proto\x1a\x1eproto/bank/type/exchange.proto2\xac\x01\n" +
-	"\vBankService\x12P\n" +
-	"\x11GetCurrentBalance\x12\x1b.bank.CurrentBalanceRequest\x1a\x1c.bank.CurrentBalanceResponse\"\x00\x12K\n" +
+	"\x18proto/bank/service.proto\x12\x04bank\x1a\x1dproto/bank/type/account.proto\x1a\x1eproto/bank/type/exchange.proto2\xaa\x01\n" +
+	"\vBankService\x12N\n" +
+	"\x11GetCurrentBalance\x12\x1b.bank.CurrentBalanceRequest\x1a\x1c.bank.CurrentBalanceResponse\x12K\n" +
 	"\x12FetchExchangeRates\x12\x19.bank.ExchangeRateRequest\x1a\x1a.bank.ExchangeRateResponseB5Z3github.com/sisco-exp/my-grpc-proto/protogen/go/bankb\x06proto3"
 
 var file_proto_bank_service_proto_goTypes = []any{
