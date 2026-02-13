@@ -8,6 +8,6 @@ import "proto/bank/type/exchange.proto";
 option go_package="github.com/sisco-exp/my-grpc-proto/protogen/go/bank";
 
 service BankService {
-    rpc GetCurrentBalance(CurrentBalanceRequest) returns (CurrentBalanceResponse) {};
+    rpc GetCurrentBalance(CurrentBalanceRequest) returns (CurrentBalanceResponse);
     rpc FetchExchangeRates(ExchangeRateRequest) returns (ExchangeRateResponse);
-}
+};
