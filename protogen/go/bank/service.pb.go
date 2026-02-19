@@ -24,12 +24,13 @@ var File_proto_bank_service_proto protoreflect.FileDescriptor
 
 const file_proto_bank_service_proto_rawDesc = "" +
 	"\n" +
-	"\x18proto/bank/service.proto\x12\x04bank\x1a\x1dproto/bank/type/account.proto\x1a\x1eproto/bank/type/exchange.proto\x1a!proto/bank/type/transaction.proto\x1a\x1eproto/bank/type/transfer.proto2\xc3\x02\n" +
+	"\x18proto/bank/service.proto\x12\x04bank\x1a\x1dproto/bank/type/account.proto\x1a\x1eproto/bank/type/exchange.proto\x1a!proto/bank/type/transaction.proto\x1a\x1eproto/bank/type/transfer.proto2\x99\x03\n" +
 	"\vBankService\x12P\n" +
 	"\x11GetCurrentBalance\x12\x1b.bank.CurrentBalanceRequest\x1a\x1c.bank.CurrentBalanceResponse\"\x00\x12O\n" +
 	"\x12FetchExchangeRates\x12\x19.bank.ExchangeRateRequest\x1a\x1a.bank.ExchangeRateResponse\"\x000\x01\x12H\n" +
 	"\x15SummarizeTransactions\x12\x11.bank.Transaction\x1a\x18.bank.TransactionSummary\"\x00(\x01\x12G\n" +
-	"\x10TransferMultiple\x12\x15.bank.TransferRequest\x1a\x16.bank.TransferResponse\"\x00(\x010\x01B5Z3github.com/sisco-exp/my-grpc-proto/protogen/go/bankb\x06proto3"
+	"\x10TransferMultiple\x12\x15.bank.TransferRequest\x1a\x16.bank.TransferResponse\"\x00(\x010\x01\x12T\n" +
+	"\x15TestUnimplementMethod\x12\x1b.bank.CurrentBalanceRequest\x1a\x1c.bank.CurrentBalanceResponse\"\x00B5Z3github.com/sisco-exp/my-grpc-proto/protogen/go/bankb\x06proto3"
 
 var file_proto_bank_service_proto_goTypes = []any{
 	(*CurrentBalanceRequest)(nil),  // 0: bank.CurrentBalanceRequest
@@ -46,12 +47,14 @@ var file_proto_bank_service_proto_depIdxs = []int32{
 	1, // 1: bank.BankService.FetchExchangeRates:input_type -> bank.ExchangeRateRequest
 	2, // 2: bank.BankService.SummarizeTransactions:input_type -> bank.Transaction
 	3, // 3: bank.BankService.TransferMultiple:input_type -> bank.TransferRequest
-	4, // 4: bank.BankService.GetCurrentBalance:output_type -> bank.CurrentBalanceResponse
-	5, // 5: bank.BankService.FetchExchangeRates:output_type -> bank.ExchangeRateResponse
-	6, // 6: bank.BankService.SummarizeTransactions:output_type -> bank.TransactionSummary
-	7, // 7: bank.BankService.TransferMultiple:output_type -> bank.TransferResponse
-	4, // [4:8] is the sub-list for method output_type
-	0, // [0:4] is the sub-list for method input_type
+	0, // 4: bank.BankService.TestUnimplementMethod:input_type -> bank.CurrentBalanceRequest
+	4, // 5: bank.BankService.GetCurrentBalance:output_type -> bank.CurrentBalanceResponse
+	5, // 6: bank.BankService.FetchExchangeRates:output_type -> bank.ExchangeRateResponse
+	6, // 7: bank.BankService.SummarizeTransactions:output_type -> bank.TransactionSummary
+	7, // 8: bank.BankService.TransferMultiple:output_type -> bank.TransferResponse
+	4, // 9: bank.BankService.TestUnimplementMethod:output_type -> bank.CurrentBalanceResponse
+	5, // [5:10] is the sub-list for method output_type
+	0, // [0:5] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
