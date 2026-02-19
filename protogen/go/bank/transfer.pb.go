@@ -143,7 +143,7 @@ type TransferResponse struct {
 	state             protoimpl.MessageState `protogen:"open.v1"`
 	FromAccountNumber string                 `protobuf:"bytes,1,opt,name=from_account_number,proto3" json:"from_account_number,omitempty"`
 	ToAccountNumber   string                 `protobuf:"bytes,2,opt,name=to_account_number,proto3" json:"to_account_number,omitempty"`
-	Currecncy         string                 `protobuf:"bytes,3,opt,name=currecncy,proto3" json:"currecncy,omitempty"`
+	Currency          string                 `protobuf:"bytes,3,opt,name=currency,proto3" json:"currency,omitempty"`
 	Amount            float64                `protobuf:"fixed64,4,opt,name=amount,proto3" json:"amount,omitempty"`
 	Status            TransferStatus         `protobuf:"varint,5,opt,name=status,proto3,enum=bank.TransferStatus" json:"status,omitempty"`
 	Timestamp         *datetime.DateTime     `protobuf:"bytes,6,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
@@ -195,9 +195,9 @@ func (x *TransferResponse) GetToAccountNumber() string {
 	return ""
 }
 
-func (x *TransferResponse) GetCurrecncy() string {
+func (x *TransferResponse) GetCurrency() string {
 	if x != nil {
-		return x.Currecncy
+		return x.Currency
 	}
 	return ""
 }
@@ -232,11 +232,11 @@ const file_proto_bank_type_transfer_proto_rawDesc = "" +
 	"\x13from_account_number\x18\x01 \x01(\tR\x13from_account_number\x12,\n" +
 	"\x11to_account_number\x18\x02 \x01(\tR\x11to_account_number\x12\x1c\n" +
 	"\tcurrecncy\x18\x03 \x01(\tR\tcurrecncy\x12\x16\n" +
-	"\x06amount\x18\x04 \x01(\x01R\x06amount\"\x8b\x02\n" +
+	"\x06amount\x18\x04 \x01(\x01R\x06amount\"\x89\x02\n" +
 	"\x10TransferResponse\x120\n" +
 	"\x13from_account_number\x18\x01 \x01(\tR\x13from_account_number\x12,\n" +
-	"\x11to_account_number\x18\x02 \x01(\tR\x11to_account_number\x12\x1c\n" +
-	"\tcurrecncy\x18\x03 \x01(\tR\tcurrecncy\x12\x16\n" +
+	"\x11to_account_number\x18\x02 \x01(\tR\x11to_account_number\x12\x1a\n" +
+	"\bcurrency\x18\x03 \x01(\tR\bcurrency\x12\x16\n" +
 	"\x06amount\x18\x04 \x01(\x01R\x06amount\x12,\n" +
 	"\x06status\x18\x05 \x01(\x0e2\x14.bank.TransferStatusR\x06status\x123\n" +
 	"\ttimestamp\x18\x06 \x01(\v2\x15.google.type.DateTimeR\ttimestamp*j\n" +
