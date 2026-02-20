@@ -15,7 +15,7 @@ enum TransferStatus {
 message TransferRequest {
     string from_account_number = 1 [json_name="from_account_number"];
     string to_account_number = 2 [json_name="to_account_number"];
-    string currecncy = 3;
+    string currency = 3;
     double amount = 4;
 
 }
