@@ -75,7 +75,7 @@ type TransferRequest struct {
 	state             protoimpl.MessageState `protogen:"open.v1"`
 	FromAccountNumber string                 `protobuf:"bytes,1,opt,name=from_account_number,proto3" json:"from_account_number,omitempty"`
 	ToAccountNumber   string                 `protobuf:"bytes,2,opt,name=to_account_number,proto3" json:"to_account_number,omitempty"`
-	Currecncy         string                 `protobuf:"bytes,3,opt,name=currecncy,proto3" json:"currecncy,omitempty"`
+	Currency          string                 `protobuf:"bytes,3,opt,name=currency,proto3" json:"currency,omitempty"`
 	Amount            float64                `protobuf:"fixed64,4,opt,name=amount,proto3" json:"amount,omitempty"`
 	unknownFields     protoimpl.UnknownFields
 	sizeCache         protoimpl.SizeCache
@@ -125,9 +125,9 @@ func (x *TransferRequest) GetToAccountNumber() string {
 	return ""
 }
 
-func (x *TransferRequest) GetCurrecncy() string {
+func (x *TransferRequest) GetCurrency() string {
 	if x != nil {
-		return x.Currecncy
+		return x.Currency
 	}
 	return ""
 }
@@ -227,11 +227,11 @@ var File_proto_bank_type_transfer_proto protoreflect.FileDescriptor
 
 const file_proto_bank_type_transfer_proto_rawDesc = "" +
 	"\n" +
-	"\x1eproto/bank/type/transfer.proto\x12\x04bank\x1a proto/google/type/datetime.proto\"\xa7\x01\n" +
+	"\x1eproto/bank/type/transfer.proto\x12\x04bank\x1a proto/google/type/datetime.proto\"\xa5\x01\n" +
 	"\x0fTransferRequest\x120\n" +
 	"\x13from_account_number\x18\x01 \x01(\tR\x13from_account_number\x12,\n" +
-	"\x11to_account_number\x18\x02 \x01(\tR\x11to_account_number\x12\x1c\n" +
-	"\tcurrecncy\x18\x03 \x01(\tR\tcurrecncy\x12\x16\n" +
+	"\x11to_account_number\x18\x02 \x01(\tR\x11to_account_number\x12\x1a\n" +
+	"\bcurrency\x18\x03 \x01(\tR\bcurrency\x12\x16\n" +
 	"\x06amount\x18\x04 \x01(\x01R\x06amount\"\x89\x02\n" +
 	"\x10TransferResponse\x120\n" +
 	"\x13from_account_number\x18\x01 \x01(\tR\x13from_account_number\x12,\n" +
