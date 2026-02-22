@@ -15,7 +15,7 @@ message ResiliencyResponse {
 }
 
 service ResilincyService {
-    rpc UnaryResilisnecy (ResiliencyRequest) returns (ResiliencyResponse) {}
+    rpc UnaryResiliency (ResiliencyRequest) returns (ResiliencyResponse) {}
     rpc ServerStreamingResiliency (ResiliencyRequest) returns (stream ResiliencyResponse) {}
     rpc ClientStreamingResiliency (stream ResiliencyRequest) returns (ResiliencyResponse) {}
     rpc BiDirectionalStreamingResiliency (stream ResiliencyRequest) returns (stream ResiliencyResponse) {}
