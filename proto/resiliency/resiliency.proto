@@ -14,7 +14,7 @@ message ResiliencyResponse {
     string dummy_string =1 [json_name="dummy_string"];
 }
 
-service ResilincyService {
+service ResiliencyService {
     rpc UnaryResiliency (ResiliencyRequest) returns (ResiliencyResponse) {}
     rpc ServerStreamingResiliency (ResiliencyRequest) returns (stream ResiliencyResponse) {}
     rpc ClientStreamingResiliency (stream ResiliencyRequest) returns (ResiliencyResponse) {}
