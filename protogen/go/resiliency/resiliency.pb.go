@@ -136,8 +136,8 @@ const file_proto_resiliency_resiliency_proto_rawDesc = "" +
 	"\x11max_delay_seconds\x18\x02 \x01(\x05R\x11max_delay_seconds\x12\"\n" +
 	"\fstatus_codes\x18\x03 \x03(\rR\fstatus_codes\"8\n" +
 	"\x12ResiliencyResponse\x12\"\n" +
-	"\fdummy_string\x18\x01 \x01(\tR\fdummy_string2\x8f\x03\n" +
-	"\x10ResilincyService\x12R\n" +
+	"\fdummy_string\x18\x01 \x01(\tR\fdummy_string2\x90\x03\n" +
+	"\x11ResiliencyService\x12R\n" +
 	"\x0fUnaryResiliency\x12\x1d.resiliency.ResiliencyRequest\x1a\x1e.resiliency.ResiliencyResponse\"\x00\x12^\n" +
 	"\x19ServerStreamingResiliency\x12\x1d.resiliency.ResiliencyRequest\x1a\x1e.resiliency.ResiliencyResponse\"\x000\x01\x12^\n" +
 	"\x19ClientStreamingResiliency\x12\x1d.resiliency.ResiliencyRequest\x1a\x1e.resiliency.ResiliencyResponse\"\x00(\x01\x12g\n" +
@@ -161,14 +161,14 @@ var file_proto_resiliency_resiliency_proto_goTypes = []any{
 	(*ResiliencyResponse)(nil), // 1: resiliency.ResiliencyResponse
 }
 var file_proto_resiliency_resiliency_proto_depIdxs = []int32{
-	0, // 0: resiliency.ResilincyService.UnaryResiliency:input_type -> resiliency.ResiliencyRequest
-	0, // 1: resiliency.ResilincyService.ServerStreamingResiliency:input_type -> resiliency.ResiliencyRequest
-	0, // 2: resiliency.ResilincyService.ClientStreamingResiliency:input_type -> resiliency.ResiliencyRequest
-	0, // 3: resiliency.ResilincyService.BiDirectionalStreamingResiliency:input_type -> resiliency.ResiliencyRequest
-	1, // 4: resiliency.ResilincyService.UnaryResiliency:output_type -> resiliency.ResiliencyResponse
-	1, // 5: resiliency.ResilincyService.ServerStreamingResiliency:output_type -> resiliency.ResiliencyResponse
-	1, // 6: resiliency.ResilincyService.ClientStreamingResiliency:output_type -> resiliency.ResiliencyResponse
-	1, // 7: resiliency.ResilincyService.BiDirectionalStreamingResiliency:output_type -> resiliency.ResiliencyResponse
+	0, // 0: resiliency.ResiliencyService.UnaryResiliency:input_type -> resiliency.ResiliencyRequest
+	0, // 1: resiliency.ResiliencyService.ServerStreamingResiliency:input_type -> resiliency.ResiliencyRequest
+	0, // 2: resiliency.ResiliencyService.ClientStreamingResiliency:input_type -> resiliency.ResiliencyRequest
+	0, // 3: resiliency.ResiliencyService.BiDirectionalStreamingResiliency:input_type -> resiliency.ResiliencyRequest
+	1, // 4: resiliency.ResiliencyService.UnaryResiliency:output_type -> resiliency.ResiliencyResponse
+	1, // 5: resiliency.ResiliencyService.ServerStreamingResiliency:output_type -> resiliency.ResiliencyResponse
+	1, // 6: resiliency.ResiliencyService.ClientStreamingResiliency:output_type -> resiliency.ResiliencyResponse
+	1, // 7: resiliency.ResiliencyService.BiDirectionalStreamingResiliency:output_type -> resiliency.ResiliencyResponse
 	4, // [4:8] is the sub-list for method output_type
 	0, // [0:4] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
