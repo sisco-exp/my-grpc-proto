@@ -25,7 +25,7 @@ type ResiliencyRequest struct {
 	state           protoimpl.MessageState `protogen:"open.v1"`
 	MinDelaySeconds int32                  `protobuf:"varint,1,opt,name=min_delay_seconds,proto3" json:"min_delay_seconds,omitempty"`
 	MaxDelaySeconds int32                  `protobuf:"varint,2,opt,name=max_delay_seconds,proto3" json:"max_delay_seconds,omitempty"`
-	StatusCode      []uint32               `protobuf:"varint,3,rep,packed,name=status_code,proto3" json:"status_code,omitempty"`
+	StatusCodes     []uint32               `protobuf:"varint,3,rep,packed,name=status_codes,proto3" json:"status_codes,omitempty"`
 	unknownFields   protoimpl.UnknownFields
 	sizeCache       protoimpl.SizeCache
 }
@@ -74,9 +74,9 @@ func (x *ResiliencyRequest) GetMaxDelaySeconds() int32 {
 	return 0
 }
 
-func (x *ResiliencyRequest) GetStatusCode() []uint32 {
+func (x *ResiliencyRequest) GetStatusCodes() []uint32 {
 	if x != nil {
-		return x.StatusCode
+		return x.StatusCodes
 	}
 	return nil
 }
@@ -130,11 +130,11 @@ var File_proto_resiliency_resiliency_proto protoreflect.FileDescriptor
 const file_proto_resiliency_resiliency_proto_rawDesc = "" +
 	"\n" +
 	"!proto/resiliency/resiliency.proto\x12\n" +
-	"resiliency\"\x91\x01\n" +
+	"resiliency\"\x93\x01\n" +
 	"\x11ResiliencyRequest\x12,\n" +
 	"\x11min_delay_seconds\x18\x01 \x01(\x05R\x11min_delay_seconds\x12,\n" +
-	"\x11max_delay_seconds\x18\x02 \x01(\x05R\x11max_delay_seconds\x12 \n" +
-	"\vstatus_code\x18\x03 \x03(\rR\vstatus_code\"8\n" +
+	"\x11max_delay_seconds\x18\x02 \x01(\x05R\x11max_delay_seconds\x12\"\n" +
+	"\fstatus_codes\x18\x03 \x03(\rR\fstatus_codes\"8\n" +
 	"\x12ResiliencyResponse\x12\"\n" +
 	"\fdummy_string\x18\x01 \x01(\tR\fdummy_string2\x8f\x03\n" +
 	"\x10ResilincyService\x12R\n" +
