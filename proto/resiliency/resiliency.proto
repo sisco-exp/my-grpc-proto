@@ -7,7 +7,7 @@ option go_package = "github.com/sisco-exp/my-grpc-proto/protogen/go/resiliency";
 message ResiliencyRequest {
     int32 min_delay_seconds = 1 [json_name="min_delay_seconds"];
     int32 max_delay_seconds = 2 [json_name="max_delay_seconds"];
-    repeated uint32 status_code =3 [json_name="status_code"];
+    repeated uint32 status_codes =3 [json_name="status_codes"];
 }
 
 message ResiliencyResponse {
