@@ -75,7 +75,7 @@ func (x *HelloRequest) GetAge() uint32 {
 
 type HelloResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Great         string                 `protobuf:"bytes,1,opt,name=great,proto3" json:"great,omitempty"`
+	Greet         string                 `protobuf:"bytes,1,opt,name=greet,proto3" json:"greet,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -110,9 +110,9 @@ func (*HelloResponse) Descriptor() ([]byte, []int) {
 	return file_proto_hello_hello_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *HelloResponse) GetGreat() string {
+func (x *HelloResponse) GetGreet() string {
 	if x != nil {
-		return x.Great
+		return x.Greet
 	}
 	return ""
 }
@@ -126,7 +126,7 @@ const file_proto_hello_hello_proto_rawDesc = "" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x10\n" +
 	"\x03age\x18\x10 \x01(\rR\x03age\"%\n" +
 	"\rHelloResponse\x12\x14\n" +
-	"\x05great\x18\x01 \x01(\tR\x05great2\x93\x02\n" +
+	"\x05greet\x18\x01 \x01(\tR\x05greet2\x93\x02\n" +
 	"\fHelloService\x127\n" +
 	"\bSayHello\x12\x13.hello.HelloRequest\x1a\x14.hello.HelloResponse\"\x00\x12>\n" +
 	"\rSayManyHellos\x12\x13.hello.HelloRequest\x1a\x14.hello.HelloResponse\"\x000\x01\x12C\n" +
