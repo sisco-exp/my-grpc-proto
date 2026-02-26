@@ -56,7 +56,6 @@ protoc-go-gateway:
 	--grpc-gateway_opt logtostderr=true \
 	--grpc-gateway_opt paths=source_relative \
 	--grpc-gateway_opt grpc_api_configuration=./grpc-gateway/config.yml \
-	--grpc-gateway_opt openapi_configuration=./grpc-gateway/config-openapi.yml \
 	--grpc-gateway_opt standalone=true \
 	--grpc-gateway_opt generate_unbound_methods=true \
 	./proto/hello/*.proto \
