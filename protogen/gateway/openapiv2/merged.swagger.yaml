@@ -314,8 +314,74 @@ paths:
           collectionFormat: multi
       tags:
         - ResiliencyService
-  /bank.BankService/FetchExchangeRates:
+  /bank.BankService/TestUnimplementMethod:
     post:
+      operationId: BankService_TestUnimplementMethod
+      responses:
+        "200":
+          description: A successful response.
+          schema:
+            $ref: '#/definitions/bankCurrentBalanceResponse'
+        default:
+          description: An unexpected error response.
+          schema:
+            $ref: '#/definitions/rpcStatus'
+      parameters:
+        - name: body
+          description: Description for CurrentBalanceRequest
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/bankCurrentBalanceRequest'
+      tags:
+        - BankService
+  /bank/v1/account:
+    post:
+      operationId: BankService_CreateAccount
+      responses:
+        "200":
+          description: A successful response.
+          schema:
+            $ref: '#/definitions/bankCreateAccountResponse'
+        default:
+          description: An unexpected error response.
+          schema:
+            $ref: '#/definitions/rpcStatus'
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/bankCreateAccountRequest'
+      tags:
+        - BankService
+  /bank/v1/account/current_balance:
+    get:
+      summary: Summary for GetCurrentBalance
+      description: Description for GetCurrentBalance
+      operationId: BankService_GetCurrentBalance
+      responses:
+        "200":
+          description: Return current account balance
+          schema:
+            $ref: '#/definitions/bankCurrentBalanceResponse'
+        "400":
+          description: Returned when given account number is not exists
+          schema: {}
+        default:
+          description: An unexpected error response.
+          schema:
+            $ref: '#/definitions/rpcStatus'
+      parameters:
+        - name: account_number
+          description: Account number to get the balance
+          in: query
+          required: false
+          type: string
+      tags:
+        - BankService
+  /bank/v1/exchange_rates:
+    get:
       summary: Summary for FetchExchangeRates
       description: Description for FetchExchangeRates
       operationId: BankService_FetchExchangeRates
@@ -338,41 +404,19 @@ paths:
           schema:
             $ref: '#/definitions/rpcStatus'
       parameters:
-        - name: body
-          description: Description for ExchangeRateRequest
-          in: body
-          required: true
-          schema:
-            $ref: '#/definitions/bankExchangeRateRequest'
+        - name: from_currency
+          description: Exchange rate from currency
+          in: query
+          required: false
+          type: string
+        - name: to_currency
+          description: Exchange rate to currency
+          in: query
+          required: false
+          type: string
       tags:
         - BankService
-  /bank.BankService/GetCurrentBalance:
-    post:
-      summary: Summary for GetCurrentBalance
-      description: Description for GetCurrentBalance
-      operationId: BankService_GetCurrentBalance
-      responses:
-        "200":
-          description: Return current account balance
-          schema:
-            $ref: '#/definitions/bankCurrentBalanceResponse'
-        "400":
-          description: Returned when given account number is not exists
-          schema: {}
-        default:
-          description: An unexpected error response.
-          schema:
-            $ref: '#/definitions/rpcStatus'
-      parameters:
-        - name: body
-          description: Description for CurrentBalanceRequest
-          in: body
-          required: true
-          schema:
-            $ref: '#/definitions/bankCurrentBalanceRequest'
-      tags:
-        - BankService
-  /bank.BankService/SummarizeTransactions:
+  /bank/v1/transaction/summarize:
     post:
       operationId: BankService_SummarizeTransactions
       responses:
@@ -393,28 +437,7 @@ paths:
             $ref: '#/definitions/bankTransaction'
       tags:
         - BankService
-  /bank.BankService/TestUnimplementMethod:
-    post:
-      operationId: BankService_TestUnimplementMethod
-      responses:
-        "200":
-          description: A successful response.
-          schema:
-            $ref: '#/definitions/bankCurrentBalanceResponse'
-        default:
-          description: An unexpected error response.
-          schema:
-            $ref: '#/definitions/rpcStatus'
-      parameters:
-        - name: body
-          description: Description for CurrentBalanceRequest
-          in: body
-          required: true
-          schema:
-            $ref: '#/definitions/bankCurrentBalanceRequest'
-      tags:
-        - BankService
-  /bank.BankService/TransferMultiple:
+  /bank/v1/transaction/transfer_multiple:
     post:
       operationId: BankService_TransferMultiple
       responses:
@@ -536,6 +559,21 @@ paths:
       tags:
         - HelloService
 definitions:
+  bankCreateAccountRequest:
+    type: object
+    properties:
+      account_name:
+        type: string
+      currency:
+        type: string
+      initial_deposit_amount:
+        type: number
+        format: double
+  bankCreateAccountResponse:
+    type: object
+    properties:
+      account_uuid:
+        type: string
   bankCurrentBalanceRequest:
     type: object
     properties:
@@ -555,16 +593,6 @@ definitions:
         $ref: '#/definitions/typeDate'
         description: Current date
     description: Description for CurrentBalanceResponse
-  bankExchangeRateRequest:
-    type: object
-    properties:
-      from_currency:
-        type: string
-        description: Exchange rate from currency
-      to_currency:
-        type: string
-        description: Exchange rate to currency
-    description: Description for ExchangeRateRequest
   bankExchangeRateResponse:
     type: object
     properties:
